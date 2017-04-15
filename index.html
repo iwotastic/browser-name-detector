@@ -15,9 +15,11 @@ Either download <code>main.js</code> or paste the following code in your HTML so
 Simply call the global <code>bnd()</code> function to view the client browser name.
 
 <h2>Demo</h2>
-<p>Your current browser is <code id="browser"></code>.</p>
+<p>Your current browser is <code id="browser"></code>, this <code id="uacomp"></code> what your useragent says.</p>
 
 <script src="https://iwotastic.github.io/browser-name-detector/main.js"></script>
 <script>
-document.getElementById("browser").innerHTML = bnd()
+var bn = bnd()
+document.getElementById("browser").innerHTML = bn
+document.getElementById("uacomp").innerHTML = (window.navigator.userAgent.match(bn).length > 0 ? "is also" : "differs from")
 </script>
