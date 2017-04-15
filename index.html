@@ -21,5 +21,5 @@ Simply call the global <code>bnd()</code> function to view the client browser na
 <script>
 var bn = bnd()
 document.getElementById("browser").innerHTML = bn
-document.getElementById("uacomp").innerHTML = (window.navigator.userAgent.match(bn).length > 0 ? "is also" : "differs from")
+document.getElementById("uacomp").innerHTML = (window.navigator.userAgent.match(bn) ? "is also" : "differs from")
 </script>
