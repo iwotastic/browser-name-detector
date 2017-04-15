@@ -23,4 +23,4 @@
   }else{
     window.browserNameDetector = bnd
   }
-})
+})();
